@@ -118,8 +118,7 @@ pipeline {
                 '''
             }
         }
-
-        stage('Push - Branch to master') {
+        stage('Push - Branch to master1') {
             //Este paso lo ejecuta sólo si estamos en el master.
             when {
                 branch 'b1.0'
@@ -128,12 +127,46 @@ pipeline {
                 echo 'Realizando Git checkout a master...'
                 sh '''
                     bash -c "git checkout master"
+                '''
+            }
+        }
+        stage('Push - Branch to master2') {
+            //Este paso lo ejecuta sólo si estamos en el master.
+            when {
+                branch 'b1.0'
+            }
+            steps {
+                echo 'Realizando Git checkout a master...'
+                sh '''
                     bash -c "git pull"
+                '''
+            }
+        }
+        stage('Push - Branch to master 3') {
+            //Este paso lo ejecuta sólo si estamos en el master.
+            when {
+                branch 'b1.0'
+            }
+            steps {
+                echo 'Realizando Git checkout a master...'
+                sh '''
                     bash -c "git merge b1.0"
+                '''
+            }
+        }
+        stage('Push - Branch to master 4') {
+            //Este paso lo ejecuta sólo si estamos en el master.
+            when {
+                branch 'b1.0'
+            }
+            steps {
+                echo 'Realizando Git checkout a master...'
+                sh '''
                     bash -c "git push origin master"
                 '''
             }
         }
+
         stage ('CleanUp workspace') {
             //Limpiamos el workspace para no llenar los discos
            steps {
