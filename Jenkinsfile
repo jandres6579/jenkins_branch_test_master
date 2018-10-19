@@ -138,7 +138,7 @@ pipeline {
             steps {
                 echo 'Realizando Git checkout a master...'
                 sh '''
-                    bash -c "git pull"
+                    bash -c "git pull origin master"
                 '''
             }
         }
