@@ -1,0 +1,12 @@
+{
+    "orionEntity_type": "jenkins",
+    "orionMethodPOST": "POST",
+    "orionHost": "http://localhost",
+    "orionPort": "1026",
+    "orionPathV2OpUpdate": "/v2/op/update",
+    "orionActionType": "APPEND",
+    "orionService": "jenkins",
+    "orionServicePath": "/pruebas",
+    "orionx-auth-token": null
+}
+  
